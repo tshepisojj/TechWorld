@@ -1,2 +1,13 @@
 include ':app'
 rootProject.name = "ekart"
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // legacy, required for older libs
+        maven {
+            url "https://rbm-jp-p01.m.pipelineruntime.com"
+        }
+    }
+}
