@@ -19,14 +19,15 @@ buildscript {
 
 allprojects {
     repositories {
-    google()
-    mavenCentral()
-    maven { url 'https://jitpack.io' }
-    // This is a mirror that still holds the old JCenter files
-    maven { url "https://rbm-jp-p01.m.pipelineruntime.com" }
+        google()
+        mavenCentral()
+        jcenter() // legacy support
+        maven {
+            url "https://rbm-jp-p01.m.pipelineruntime.com"
+        }
+    }
 }
 
-}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
