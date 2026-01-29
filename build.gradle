@@ -19,11 +19,13 @@ buildscript {
 
 allprojects {
     repositories {
-        google()
-        mavenCentral() // jcenter wont run so am using maven
-        maven { url 'https://jitpack.io' } // for 'android-image-cropper'
-        jcenter()
-    }
+    google()
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    // This is a mirror that still holds the old JCenter files
+    maven { url "https://rbm-jp-p01.m.pipelineruntime.com" }
+}
+
 }
 
 task clean(type: Delete) {
