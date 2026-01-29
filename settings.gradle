@@ -1,13 +1,23 @@
-include ':app'
-rootProject.name = "ekart"
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        gradlePluginPortal()
+    }
+}
+
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // legacy, required for older libs
+        jcenter()
         maven {
             url "https://rbm-jp-p01.m.pipelineruntime.com"
         }
     }
 }
+
+rootProject.name = "ekart"
+include ':app'
