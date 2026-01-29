@@ -31,12 +31,6 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 }
-configurations.all {
-    resolutionStrategy {
-        force 'io.paperdb:paperdb:2.7.1'
-    }
-}
-
 
 dependencies {
 
@@ -53,8 +47,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-storage'
 
-    implementation 'com.firebaseui:firebase-ui-database:8.0.2'{
-    exclude group: 'io.paperdb', module: 'paperdb'
+    implementation('com.firebaseui:firebase-ui-database:8.0.2') {
+        exclude group: 'io.paperdb', module: 'paperdb'
     }
 
     // --- UI / Utilities ---
@@ -63,7 +57,7 @@ dependencies {
     implementation 'io.paperdb:paperdb:2.7.1'
     implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
 
-    // --- Image cropper (maintained fork – RECOMMENDED) ---
+    // --- Image cropper (maintained fork) ---
     implementation 'com.canhub.cropper:android-image-cropper:4.5.0'
 
     // --- Navigation & Lifecycle ---
