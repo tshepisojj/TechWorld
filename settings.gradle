@@ -10,9 +10,12 @@ pluginManagement {
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
     repositories {
+        // Important: public repos first
         google()
         mavenCentral()
-        jcenter()
+        jcenter() // legacy, for older libraries
+
+        // Add company repo last
         maven {
             url "https://rbm-jp-p01.m.pipelineruntime.com"
         }
